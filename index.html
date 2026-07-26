@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OBEDI Editor Plus</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#4CAF50">
+
+<script>
+if ("serviceWorker" in navigator) {
+window.addEventListener("load", () => {
+navigator.serviceWorker.register("./sw.js");
+});
+}
+</script>
+</head>
+
+<body>
+
+<header>
+<h1>OBEDI Editor Plus</h1>
+</header>
+
+<main>
+
+<textarea id="text-editor" placeholder="Écrivez ici..."></textarea>
+
+<canvas id="editor-canvas" width="500" height="500"></canvas>
+
+<div id="controls">
+<button id="btnAfficher">Afficher le texte</button>
+<button id="btnExporter">Exporter</button>
+</div>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
